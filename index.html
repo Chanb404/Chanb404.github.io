@@ -23,8 +23,6 @@
 
   
   
-    <link href="/favicon.png" rel="icon">
-  
   
   <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
   <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
@@ -38,26 +36,7 @@
 
   <!-- analytics -->
   
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-70812759-1', 'auto');
-  ga('send', 'pageview');
-</script>
 
-
-
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?cb5448498d7169c668b07c2b255d62c1";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
 
 
 <meta name="generator" content="Hexo 4.2.0"></head>
@@ -77,31 +56,25 @@ var _hmt = _hmt || [];
 		  
 		  <li>
 			<a href="/archives" title="All the articles.">
-			  <i class=""></i>Archives
+			  <i class="fa fa-archive"></i>Archives
 			</a>
 		  </li>
 		  
 		  <li>
 			<a href="/categories" title="All the categories.">
-			  <i class=""></i>Categories
+			  <i class="fa fa-folder"></i>Categories
 			</a>
 		  </li>
 		  
 		  <li>
 			<a href="/tags" title="All the tags.">
-			  <i class=""></i>Tags
+			  <i class="fa fa-tags"></i>Tags
 			</a>
 		  </li>
 		  
 		  <li>
 			<a href="/about" title="About me.">
-			  <i class=""></i>About
-			</a>
-		  </li>
-		  
-		  <li>
-			<a href="/atom.xml" title="Subscribe me.">
-			  <i class=""></i>RSS
+			  <i class="fa fa-user"></i>About
 			</a>
 		  </li>
 		  
@@ -128,7 +101,7 @@ var _hmt = _hmt || [];
 
 		<i class="fa fa-heart blink-slow"></i>
 
-		Keep and carry on.
+		Nothing to say.
 
 </div>    
 
@@ -192,67 +165,6 @@ var _hmt = _hmt || [];
 	
 		<p>公司内部会有很多公用组件, 不方便上传到 npm 官方仓库进行管理, 选择搭建私有 NPM 仓库, 方便管理.</p>
 <p>市面上很多相关开源项目, 功能上大同小异, 这里选择使用<a href="https://github.com/verdaccio/verdaccio" target="_blank" rel="noopener">Verdaccio</a>.</p>
-<h2 id="服务端搭建"><a href="#服务端搭建" class="headerlink" title="服务端搭建"></a>服务端搭建</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>Verdaccio 是基于 Node 的, 为了方便, 这里选择使用 <code>Docker</code> 和 <code>docker-compose</code>. 他们的安装见<a href="https://www.docker.com/get-started" target="_blank" rel="noopener">官网</a></p>
-<p>创建 <code>Verdaccio</code> 目录, 用于存放相关的内容. 该目录中还需创建</p>
-<ul>
-<li><code>config</code> 目录用于存放自定义配置文件</li>
-<li><code>plugins</code> 目录用于存放插件文件</li>
-<li><code>storage</code> 目录用于存储</li>
-</ul>
-<h3 id="编辑配置"><a href="#编辑配置" class="headerlink" title="编辑配置"></a>编辑配置</h3><ol>
-<li><code>Verdaccio</code> 配置</li>
-</ol>
-<p>创建 <code>Verdaccio/config/config.yaml</code> 文件, 写入项目中的默认 docker 用法的配置 (源码/conf/docker.yaml). 内容如下:</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># This is the config file used for the docker images.</span></span><br><span class="line"><span class="comment"># It allows all users to do anything, so don't use it on production systems.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Do not configure host and port under `listen` in this file</span></span><br><span class="line"><span class="comment"># as it will be ignored when using docker.</span></span><br><span class="line"><span class="comment"># see https://verdaccio.org/docs/en/docker#docker-and-custom-port-configuration</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Look here for more config file examples:</span></span><br><span class="line"><span class="comment"># https://github.com/verdaccio/verdaccio/tree/master/conf</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># path to a directory with all packages</span></span><br><span class="line"><span class="attr">storage:</span> <span class="string">/verdaccio/storage/data</span></span><br><span class="line"><span class="comment"># path to a directory with plugins to include</span></span><br><span class="line"><span class="attr">plugins:</span> <span class="string">/verdaccio/plugins</span></span><br><span class="line"></span><br><span class="line"><span class="attr">web:</span></span><br><span class="line">  <span class="comment"># WebUI is enabled as default, if you want disable it, just uncomment this line</span></span><br><span class="line">  <span class="comment">#enable: false</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">Verdaccio</span></span><br><span class="line">  <span class="comment"># comment out to disable gravatar support</span></span><br><span class="line">  <span class="comment"># gravatar: false</span></span><br><span class="line">  <span class="comment"># by default packages are ordercer ascendant (asc|desc)</span></span><br><span class="line">  <span class="comment"># sort_packages: asc</span></span><br><span class="line"></span><br><span class="line"><span class="attr">auth:</span></span><br><span class="line">  <span class="attr">htpasswd:</span></span><br><span class="line">    <span class="attr">file:</span> <span class="string">/verdaccio/storage/htpasswd</span></span><br><span class="line">    <span class="comment"># Maximum amount of users allowed to register, defaults to "+infinity".</span></span><br><span class="line">    <span class="comment"># You can set this to -1 to disable registration.</span></span><br><span class="line">    <span class="comment"># max_users: 1000</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># a list of other known repositories we can talk to</span></span><br><span class="line"><span class="attr">uplinks:</span></span><br><span class="line">  <span class="attr">npmjs:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">https://registry.npmjs.org/</span></span><br><span class="line"></span><br><span class="line"><span class="attr">packages:</span></span><br><span class="line">  <span class="string">'@*/*'</span><span class="string">:</span></span><br><span class="line">    <span class="comment"># scoped packages</span></span><br><span class="line">    <span class="attr">access:</span> <span class="string">$all</span></span><br><span class="line">    <span class="attr">publish:</span> <span class="string">$authenticated</span></span><br><span class="line">    <span class="attr">unpublish:</span> <span class="string">$authenticated</span></span><br><span class="line">    <span class="attr">proxy:</span> <span class="string">npmjs</span></span><br><span class="line"></span><br><span class="line">  <span class="string">'**'</span><span class="string">:</span></span><br><span class="line">    <span class="comment"># allow all users (including non-authenticated users) to read and</span></span><br><span class="line">    <span class="comment"># publish all packages</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="comment"># you can specify usernames/groupnames (depending on your auth plugin)</span></span><br><span class="line">    <span class="comment"># and three keywords: "$all", "$anonymous", "$authenticated"</span></span><br><span class="line">    <span class="attr">access:</span> <span class="string">$all</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># allow all known users to publish/publish packages</span></span><br><span class="line">    <span class="comment"># (anyone can register by default, remember?)</span></span><br><span class="line">    <span class="attr">publish:</span> <span class="string">$authenticated</span></span><br><span class="line">    <span class="attr">unpublish:</span> <span class="string">$authenticated</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># if package is not available locally, proxy requests to 'npmjs' registry</span></span><br><span class="line">    <span class="attr">proxy:</span> <span class="string">npmjs</span></span><br><span class="line"></span><br><span class="line"><span class="attr">middlewares:</span></span><br><span class="line">  <span class="attr">audit:</span></span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># log settings</span></span><br><span class="line"><span class="attr">logs:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&#123;</span> <span class="attr">type:</span> <span class="string">stdout,</span> <span class="attr">format:</span> <span class="string">pretty,</span> <span class="attr">level:</span> <span class="string">http</span> <span class="string">&#125;</span></span><br><span class="line">  <span class="comment">#- &#123;type: file, path: verdaccio.log, level: info&#125;</span></span><br><span class="line"><span class="comment">#experiments:</span></span><br><span class="line"><span class="comment">#  # support for npm token command</span></span><br><span class="line"><span class="comment">#  token: false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># This affect the web and api (not developed yet)</span></span><br><span class="line"><span class="comment">#i18n:</span></span><br><span class="line"><span class="comment">#web: en-US</span></span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li><code>docker-compose</code> 配置</li>
-</ol>
-<p>创建 <code>Verdaccio/docker-compose.yml</code> 文件, 写入内容:</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">'3.1'</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">verdaccio:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">verdaccio/verdaccio</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">"verdaccio"</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">node-network</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">VERDACCIO_PORT=4873</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"4873:4873"</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"./storage:/verdaccio/storage"</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"./config:/verdaccio/conf"</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"./plugins:/verdaccio/plugins"</span></span><br><span class="line"><span class="attr">networks:</span></span><br><span class="line">  <span class="attr">node-network:</span></span><br><span class="line">    <span class="attr">driver:</span> <span class="string">bridge</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><p>进入 <code>Verdaccio</code> 目录, 执行 <code>$ docker-compose up -d</code> 即可启动 <code>verdaccio</code> 容器.</p>
-<p>这里有遇到一个错误, <code>$ docker logs verdaccio</code> 容器内没有访问我们创建的存储目录的权限. 来到 <code>Verdaccio</code> 的上层目录,<br>执行 <code>$ chown -R 10001:65533 Verdaccio/</code> 将仓库所有者变更为启动 <code>verdaccio</code> 容器的用户(Verdaccio 默认的用户 ID),<br>然后 <code>$ docker restart verdaccio</code> 重启容器即可.</p>
-<p>此时服务端基本配置完成, 访问 <code>ip:4873</code>, 应得到如下内容</p>
-<p><img src="/images/20200323/verdaccio_default.png" alt=""></p>
-<p>NOTE: 使用云服务器要注意主机的防火墙和控制台的防火墙要打开 4873 端口</p>
-<h2 id="客户端配置"><a href="#客户端配置" class="headerlink" title="客户端配置"></a>客户端配置</h2><h3 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h3><h4 id="一次性应用"><a href="#一次性应用" class="headerlink" title="一次性应用"></a>一次性应用</h4><h5 id="预先配置"><a href="#预先配置" class="headerlink" title="预先配置"></a>预先配置</h5><p>为私有仓库添加账户. 执行以下命令, 并键入要求的信息</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm adduser --registry http://ip:4873</span><br></pre></td></tr></table></figure>
-
-<h5 id="发布包"><a href="#发布包" class="headerlink" title="发布包"></a>发布包</h5><p>进入要发布的包目录</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm publish --registry http://ip:4873</span><br></pre></td></tr></table></figure>
-
-<h5 id="安装包"><a href="#安装包" class="headerlink" title="安装包"></a>安装包</h5><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --registry http://ip:4873 packagename</span><br></pre></td></tr></table></figure>
-
-<h5 id="删除包-取消发布"><a href="#删除包-取消发布" class="headerlink" title="删除包(取消发布)"></a>删除包(取消发布)</h5><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm unpublish --force packagename</span><br></pre></td></tr></table></figure>
-
-<h4 id="全局应用配置"><a href="#全局应用配置" class="headerlink" title="全局应用配置"></a>全局应用配置</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="built_in">set</span> registry http://ip:4873</span><br><span class="line">$ npm adduser --registry http://ip:4873</span><br><span class="line">$ npm profile <span class="built_in">set</span> password --registry http://ip:4873</span><br></pre></td></tr></table></figure>
-
-<p>关于全局应用, 下面会提及.</p>
-<h3 id="yarn"><a href="#yarn" class="headerlink" title="yarn"></a>yarn</h3><p>笔者未找到 Yarn 官方提供的一次性使用方法, 但是在 <a href="https://stackoverflow.com/a/58480279" target="_blank" rel="noopener">StackOverflow</a> 找到一种方案</p>
-<h4 id="发布包-1"><a href="#发布包-1" class="headerlink" title="发布包"></a>发布包</h4><p>进入要发布的包目录</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ YARN_REGISTRY=<span class="string">"http://ip:4873"</span> yarn publish</span><br></pre></td></tr></table></figure>
-
-<h4 id="安装包-1"><a href="#安装包-1" class="headerlink" title="安装包"></a>安装包</h4><p>进入要发布的包目录</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ YARN_REGISTRY=<span class="string">"http://ip:4873"</span> yarn add packagename</span><br></pre></td></tr></table></figure>
-
-<h4 id="全局应用配置-1"><a href="#全局应用配置-1" class="headerlink" title="全局应用配置"></a>全局应用配置</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yarn config <span class="built_in">set</span> registry http://ip:4873</span><br></pre></td></tr></table></figure>
-
-<h3 id="关于全局应用"><a href="#关于全局应用" class="headerlink" title="关于全局应用"></a>关于全局应用</h3><p>使用一次性应用方法安装的包, 在统一执行安装依赖命令 <code>$ npm install</code> 会出麻烦, 因为在官方仓库没有我们发布的包.<br>使用全局应用的方式, 配合服务端的上游代理, 可以实现用正常的命令来安装私有和公共包. </p>
-<p>Verdaccio 默认配置上游代理为 <code>npmjs</code>, 实践中发现如果客户端使用的是 yarn, 可能会出现部分公共包安装失败的情况,<br>所以使用 <code>yarnpkg</code> 作为上端. 配置方法如下</p>
-<p>编辑服务端 <code>Verdaccio/config/config.yaml</code></p>
-<ol>
-<li>在 <code>uplink</code> 块下增加 <code>yarnpkg</code> 源</li>
-</ol>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">yarnpkg:</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">https://registry.yarnpkg.com/</span></span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>修改 <code>packages</code> 块的子项的 <code>proxy</code> 值</li>
-</ol>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">proxy:</span> <span class="string">yarnpkg</span></span><br></pre></td></tr></table></figure>
-
-<p>保存后, 使用 <code>$ docker restart verdaccio</code> 重启 <code>verdaccio</code> 容器, 完成.</p>
-
 	
 	</div>
   <a type="button" href="/2020/03/23/私有 NPM 仓库搭建记录/#more" class="btn btn-default more">Read More</a>
@@ -689,13 +601,7 @@ var _hmt = _hmt || [];
 	<h4>Links</h4>
 	<ul class="blogroll list-unstyled">
 	
-		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/hexo-theme-freemind" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
-	
-		<li><i class="fa fa-github"></i><a href="https://github.com/kristopolous/BOOTSTRA.386" title="BOOTSTRA.386's Github repository." target="_blank"]);">BOOTSTRA.386</a></li>
-	
-		<li><i class="fa fa-github"></i><a href="https://github.com/blackshow/hexo-theme-freemind.386" title="Freemind.386's Github repository." target="_blank"]);">Freemind.386</a></li>
-	
-		<li><i class="fa fa-github"></i><a href="http://www.github.com/blackshow" title="My Github account." target="_blank"]);">My Github</a></li>
+		<li><i class="fa fa-github"></i><a href="http://www.github.com/chen9959" title="My Github." target="_blank"]);">Github</a></li>
 	
 	</ul>
 </div>
@@ -733,14 +639,6 @@ var _hmt = _hmt || [];
 <script src="/js/main.js"></script>
 <script src="/js/search.js"></script> 
 
-
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
-</script>
 
 
 
