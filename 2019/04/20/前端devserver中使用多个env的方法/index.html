@@ -109,6 +109,8 @@
 	  		
 
 	  <p>项目中遇到需要针对多套演示环境来 build, 每套环境需要使用不同的变量的问题.<br>比如不同的环境使用了不同的 api 端口.</p>
+<a id="more"></a>
+
 <p>在 package.json 中</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"scripts"</span>: &#123;</span><br><span class="line">    <span class="attr">"start"</span>: <span class="string">"sh -ac '. .env.dev; react-app-rewired start'"</span>,</span><br><span class="line">    <span class="attr">"build:newsta"</span>: <span class="string">"sh -ac '. .env.newsta; react-app-rewired build'"</span>,</span><br><span class="line">    <span class="attr">"build:release"</span>: <span class="string">"sh -ac '. .env.release; react-app-rewired build'"</span>,</span><br><span class="line">    <span class="attr">"test"</span>: <span class="string">"react-app-rewired test --env=jsdom"</span>,</span><br><span class="line">    <span class="attr">"eject"</span>: <span class="string">"react-scripts eject"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 

@@ -108,7 +108,11 @@
 	<div class="mypage">		
 	  		
 
-	  <ol>
+	  <p>因为当时刚好前端要迁移到 Vue, 然后 Weex 风头正大, 所以选择了它. 没想到国内开源水深啊, 后期才发现可能是 KPI 的产物.<br>但是这个小混合 app 也没必要下车了, 踩着坑走吧, 反正估计没有下个版本…</p>
+<p>简单记录几个踩过的坑.</p>
+<a id="more"></a>
+
+<ol>
 <li><p>安卓平台中, dom 中绑定的方法必须有定义, 否则不报错但是可能会导致数据的双向绑定失效</p>
 </li>
 <li><p>input 组件不要使用 <code>v-model</code> 来绑定值, 虽然表面上看起来没问题, 但是实际上在安卓平台可能上会导致数据的双向绑定失效, 应该使用 <code>@input</code> 事件, 不需要传参数, 在对应的 method 中可以接收到 event, <code>event.value</code> 就是 input 输入的值，只能在 <code>@input</code> 或 <code>@change</code> 中更改 input 的值。</p>

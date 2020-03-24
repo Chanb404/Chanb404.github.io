@@ -108,7 +108,10 @@
 	<div class="mypage">		
 	  		
 
-	  <p>下载 cmder ,将其解压到要安装的目录.<br>设置 <code>cmder.exe</code> 使用管理员权限运行, 防止使用中权限不足. 右键 <code>cmder.exe</code> &gt; 属性 &gt; 兼容性 , 勾选 <code>以管理员身份运行此程序</code> &gt; 确定 .</p>
+	  <p>cmder 是 windows 平台用来代替 cmd 和 powershell 的很好的工具, 对于习惯操作 Linux 的人来说要顺手许多.<br>这里介绍的是如何在 VSCode 中调用 cmder.</p>
+<a id="more"></a>
+
+<p>下载 cmder ,将其解压到要安装的目录.<br>设置 <code>cmder.exe</code> 使用管理员权限运行, 防止使用中权限不足. 右键 <code>cmder.exe</code> &gt; 属性 &gt; 兼容性 , 勾选 <code>以管理员身份运行此程序</code> &gt; 确定 .</p>
 <p>在 <code>cmder.exe</code> 同级目录下, 新建 <code>vscode.bat</code> 文件, 输入以下内容:</p>
 <figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">SET</span> CMDER_ROOT=C:\Program Files (x86)\cmder     #这里是 cmder 的安装路径</span><br><span class="line">"<span class="variable">%CMDER_ROOT%</span>\vendor\init.bat"</span><br></pre></td></tr></table></figure>
 

@@ -108,9 +108,14 @@
 	<div class="mypage">		
 	  		
 
-	  <p>Put into ~/.zshrc</p>
+	  <p>在终端中, 默认是不走代理的, 需要手动指定代理. 每次手打命令太麻烦, 把命令弄成别名, 方便调用</p>
+<a id="more"></a>
+
+<p>Put into ~/.zshrc</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> ss=<span class="string">"export http_proxy=http://127.0.0.1:8001; export https_proxy=http://127.0.0.1:8001;"</span></span><br><span class="line"><span class="built_in">alias</span> uss=<span class="string">"unset http_proxy;unset https_proxy;"</span></span><br></pre></td></tr></table></figure>
 
+<p>然后执行 <code>$ source ~/.zshrc</code> 使其立即生效</p>
+<p>使用 <code>$ ss</code> 命令即可使用代理, 使用 <code>$ uss</code> 取消代理</p>
 	  
 	</div>
 
