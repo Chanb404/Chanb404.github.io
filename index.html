@@ -1,0 +1,757 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  
+  <title>Chan&#39;s Blog</title>
+  <meta name="author" content="Chan">
+  
+  <meta name="description" content="bb">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="Chan&#39;s Blog"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-70812759-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?cb5448498d7169c668b07c2b255d62c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">Chan&#39;s Blog</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class=""></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class=""></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class=""></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class=""></i>About
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="Subscribe me.">
+			  <i class=""></i>RSS
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 <div class="page-header logo">
+  <h1>Chan&#39;s Blog<span class="blink-fast">∎</span></h1>
+</div>
+
+<div class="row page">
+
+	
+	<div class="col-md-9">
+	
+
+		<div class="slogan">
+
+
+		<i class="fa fa-heart blink-slow"></i>
+
+		Keep and carry on.
+
+</div>    
+
+		<div id="top_search"></div>
+		<div class="mypage">
+		
+		<!-- title and entry -->
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2020/03/23/方便地在 Linux 上 安装 Node.js/" >方便地在 Linux 上安装 Node.js</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2020-03-23  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<p>想要快速地在 Linux 上安装最新的 Node.js 可以使用该工具</p>
+<blockquote>
+<p><a href="https://github.com/nodesource/distributions" target="_blank" rel="noopener">Github Repo</a></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># Using Ubuntu</span><br><span class="line">curl -sL https:&#x2F;&#x2F;deb.nodesource.com&#x2F;setup_11.x | sudo -E bash -</span><br><span class="line">sudo apt-get install -y nodejs</span><br><span class="line"></span><br><span class="line"># Using Debian, as root</span><br><span class="line">curl -sL https:&#x2F;&#x2F;deb.nodesource.com&#x2F;setup_11.x | bash -</span><br><span class="line">apt-get install -y nodejs</span><br><span class="line"></span><br><span class="line"># Using CentOS&#x2F;Fedora</span><br><span class="line">curl -sL https:&#x2F;&#x2F;rpm.nodesource.com&#x2F;setup_11.x | bash -</span><br></pre></td></tr></table></figure>
+
+
+	
+	</div>
+  <a type="button" href="/2020/03/23/方便地在 Linux 上 安装 Node.js/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2020/03/23/私有 NPM 仓库搭建记录/" >私有 NPM 仓库搭建记录</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2020-03-23  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<p>公司内部会有很多公用组件, 不方便上传到 npm 官方仓库进行管理, 选择搭建私有 NPM 仓库, 方便管理.</p>
+<p>市面上很多相关开源项目, 功能上大同小异, 这里选择使用<a href="https://github.com/verdaccio/verdaccio" target="_blank" rel="noopener">Verdaccio</a>.</p>
+<h2 id="服务端搭建"><a href="#服务端搭建" class="headerlink" title="服务端搭建"></a>服务端搭建</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>Verdaccio 是基于 Node 的, 为了方便, 这里选择使用 <code>Docker</code> 和 <code>docker-compose</code>. 他们的安装见<a href="https://www.docker.com/get-started" target="_blank" rel="noopener">官网</a></p>
+<p>创建 <code>Verdaccio</code> 目录, 用于存放相关的内容. 该目录中还需创建</p>
+<ul>
+<li><code>config</code> 目录用于存放自定义配置文件</li>
+<li><code>plugins</code> 目录用于存放插件文件</li>
+<li><code>storage</code> 目录用于存储</li>
+</ul>
+<h3 id="编辑配置"><a href="#编辑配置" class="headerlink" title="编辑配置"></a>编辑配置</h3><ol>
+<li><code>Verdaccio</code> 配置</li>
+</ol>
+<p>创建 <code>Verdaccio/config/config.yaml</code> 文件, 写入项目中的默认 docker 用法的配置 (源码/conf/docker.yaml). 内容如下:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># This is the config file used for the docker images.</span></span><br><span class="line"><span class="comment"># It allows all users to do anything, so don't use it on production systems.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Do not configure host and port under `listen` in this file</span></span><br><span class="line"><span class="comment"># as it will be ignored when using docker.</span></span><br><span class="line"><span class="comment"># see https://verdaccio.org/docs/en/docker#docker-and-custom-port-configuration</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Look here for more config file examples:</span></span><br><span class="line"><span class="comment"># https://github.com/verdaccio/verdaccio/tree/master/conf</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># path to a directory with all packages</span></span><br><span class="line"><span class="attr">storage:</span> <span class="string">/verdaccio/storage/data</span></span><br><span class="line"><span class="comment"># path to a directory with plugins to include</span></span><br><span class="line"><span class="attr">plugins:</span> <span class="string">/verdaccio/plugins</span></span><br><span class="line"></span><br><span class="line"><span class="attr">web:</span></span><br><span class="line">  <span class="comment"># WebUI is enabled as default, if you want disable it, just uncomment this line</span></span><br><span class="line">  <span class="comment">#enable: false</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">Verdaccio</span></span><br><span class="line">  <span class="comment"># comment out to disable gravatar support</span></span><br><span class="line">  <span class="comment"># gravatar: false</span></span><br><span class="line">  <span class="comment"># by default packages are ordercer ascendant (asc|desc)</span></span><br><span class="line">  <span class="comment"># sort_packages: asc</span></span><br><span class="line"></span><br><span class="line"><span class="attr">auth:</span></span><br><span class="line">  <span class="attr">htpasswd:</span></span><br><span class="line">    <span class="attr">file:</span> <span class="string">/verdaccio/storage/htpasswd</span></span><br><span class="line">    <span class="comment"># Maximum amount of users allowed to register, defaults to "+infinity".</span></span><br><span class="line">    <span class="comment"># You can set this to -1 to disable registration.</span></span><br><span class="line">    <span class="comment"># max_users: 1000</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># a list of other known repositories we can talk to</span></span><br><span class="line"><span class="attr">uplinks:</span></span><br><span class="line">  <span class="attr">npmjs:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">https://registry.npmjs.org/</span></span><br><span class="line"></span><br><span class="line"><span class="attr">packages:</span></span><br><span class="line">  <span class="string">'@*/*'</span><span class="string">:</span></span><br><span class="line">    <span class="comment"># scoped packages</span></span><br><span class="line">    <span class="attr">access:</span> <span class="string">$all</span></span><br><span class="line">    <span class="attr">publish:</span> <span class="string">$authenticated</span></span><br><span class="line">    <span class="attr">unpublish:</span> <span class="string">$authenticated</span></span><br><span class="line">    <span class="attr">proxy:</span> <span class="string">npmjs</span></span><br><span class="line"></span><br><span class="line">  <span class="string">'**'</span><span class="string">:</span></span><br><span class="line">    <span class="comment"># allow all users (including non-authenticated users) to read and</span></span><br><span class="line">    <span class="comment"># publish all packages</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="comment"># you can specify usernames/groupnames (depending on your auth plugin)</span></span><br><span class="line">    <span class="comment"># and three keywords: "$all", "$anonymous", "$authenticated"</span></span><br><span class="line">    <span class="attr">access:</span> <span class="string">$all</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># allow all known users to publish/publish packages</span></span><br><span class="line">    <span class="comment"># (anyone can register by default, remember?)</span></span><br><span class="line">    <span class="attr">publish:</span> <span class="string">$authenticated</span></span><br><span class="line">    <span class="attr">unpublish:</span> <span class="string">$authenticated</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># if package is not available locally, proxy requests to 'npmjs' registry</span></span><br><span class="line">    <span class="attr">proxy:</span> <span class="string">npmjs</span></span><br><span class="line"></span><br><span class="line"><span class="attr">middlewares:</span></span><br><span class="line">  <span class="attr">audit:</span></span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># log settings</span></span><br><span class="line"><span class="attr">logs:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">&#123;</span> <span class="attr">type:</span> <span class="string">stdout,</span> <span class="attr">format:</span> <span class="string">pretty,</span> <span class="attr">level:</span> <span class="string">http</span> <span class="string">&#125;</span></span><br><span class="line">  <span class="comment">#- &#123;type: file, path: verdaccio.log, level: info&#125;</span></span><br><span class="line"><span class="comment">#experiments:</span></span><br><span class="line"><span class="comment">#  # support for npm token command</span></span><br><span class="line"><span class="comment">#  token: false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># This affect the web and api (not developed yet)</span></span><br><span class="line"><span class="comment">#i18n:</span></span><br><span class="line"><span class="comment">#web: en-US</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><code>docker-compose</code> 配置</li>
+</ol>
+<p>创建 <code>Verdaccio/docker-compose.yml</code> 文件, 写入内容:</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">'3.1'</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">verdaccio:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">verdaccio/verdaccio</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">"verdaccio"</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">node-network</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">VERDACCIO_PORT=4873</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"4873:4873"</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"./storage:/verdaccio/storage"</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"./config:/verdaccio/conf"</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"./plugins:/verdaccio/plugins"</span></span><br><span class="line"><span class="attr">networks:</span></span><br><span class="line">  <span class="attr">node-network:</span></span><br><span class="line">    <span class="attr">driver:</span> <span class="string">bridge</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><p>进入 <code>Verdaccio</code> 目录, 执行 <code>$ docker-compose up -d</code> 即可启动 <code>verdaccio</code> 容器.</p>
+<p>这里有遇到一个错误, <code>$ docker logs verdaccio</code> 容器内没有访问我们创建的存储目录的权限. 来到 <code>Verdaccio</code> 的上层目录,<br>执行 <code>$ chown -R 10001:65533 Verdaccio/</code> 将仓库所有者变更为启动 <code>verdaccio</code> 容器的用户(Verdaccio 默认的用户 ID),<br>然后 <code>$ docker restart verdaccio</code> 重启容器即可.</p>
+<p>此时服务端基本配置完成, 访问 <code>ip:4873</code>, 应得到如下内容</p>
+<p><img src="/images/20200323/verdaccio_default.png" alt=""></p>
+<p>NOTE: 使用云服务器要注意主机的防火墙和控制台的防火墙要打开 4873 端口</p>
+<h2 id="客户端配置"><a href="#客户端配置" class="headerlink" title="客户端配置"></a>客户端配置</h2><h3 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h3><h4 id="一次性应用"><a href="#一次性应用" class="headerlink" title="一次性应用"></a>一次性应用</h4><h5 id="预先配置"><a href="#预先配置" class="headerlink" title="预先配置"></a>预先配置</h5><p>为私有仓库添加账户. 执行以下命令, 并键入要求的信息</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm adduser --registry http://ip:4873</span><br></pre></td></tr></table></figure>
+
+<h5 id="发布包"><a href="#发布包" class="headerlink" title="发布包"></a>发布包</h5><p>进入要发布的包目录</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm publish --registry http://ip:4873</span><br></pre></td></tr></table></figure>
+
+<h5 id="安装包"><a href="#安装包" class="headerlink" title="安装包"></a>安装包</h5><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --registry http://ip:4873 packagename</span><br></pre></td></tr></table></figure>
+
+<h5 id="删除包-取消发布"><a href="#删除包-取消发布" class="headerlink" title="删除包(取消发布)"></a>删除包(取消发布)</h5><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm unpublish --force packagename</span><br></pre></td></tr></table></figure>
+
+<h4 id="全局应用配置"><a href="#全局应用配置" class="headerlink" title="全局应用配置"></a>全局应用配置</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="built_in">set</span> registry http://ip:4873</span><br><span class="line">$ npm adduser --registry http://ip:4873</span><br><span class="line">$ npm profile <span class="built_in">set</span> password --registry http://ip:4873</span><br></pre></td></tr></table></figure>
+
+<p>关于全局应用, 下面会提及.</p>
+<h3 id="yarn"><a href="#yarn" class="headerlink" title="yarn"></a>yarn</h3><p>笔者未找到 Yarn 官方提供的一次性使用方法, 但是在 <a href="https://stackoverflow.com/a/58480279" target="_blank" rel="noopener">StackOverflow</a> 找到一种方案</p>
+<h4 id="发布包-1"><a href="#发布包-1" class="headerlink" title="发布包"></a>发布包</h4><p>进入要发布的包目录</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ YARN_REGISTRY=<span class="string">"http://ip:4873"</span> yarn publish</span><br></pre></td></tr></table></figure>
+
+<h4 id="安装包-1"><a href="#安装包-1" class="headerlink" title="安装包"></a>安装包</h4><p>进入要发布的包目录</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ YARN_REGISTRY=<span class="string">"http://ip:4873"</span> yarn add packagename</span><br></pre></td></tr></table></figure>
+
+<h4 id="全局应用配置-1"><a href="#全局应用配置-1" class="headerlink" title="全局应用配置"></a>全局应用配置</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yarn config <span class="built_in">set</span> registry http://ip:4873</span><br></pre></td></tr></table></figure>
+
+<h3 id="关于全局应用"><a href="#关于全局应用" class="headerlink" title="关于全局应用"></a>关于全局应用</h3><p>使用一次性应用方法安装的包, 在统一执行安装依赖命令 <code>$ npm install</code> 会出麻烦, 因为在官方仓库没有我们发布的包.<br>使用全局应用的方式, 配合服务端的上游代理, 可以实现用正常的命令来安装私有和公共包. </p>
+<p>Verdaccio 默认配置上游代理为 <code>npmjs</code>, 实践中发现如果客户端使用的是 yarn, 可能会出现部分公共包安装失败的情况,<br>所以使用 <code>yarnpkg</code> 作为上端. 配置方法如下</p>
+<p>编辑服务端 <code>Verdaccio/config/config.yaml</code></p>
+<ol>
+<li>在 <code>uplink</code> 块下增加 <code>yarnpkg</code> 源</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">yarnpkg:</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">https://registry.yarnpkg.com/</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>修改 <code>packages</code> 块的子项的 <code>proxy</code> 值</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">proxy:</span> <span class="string">yarnpkg</span></span><br></pre></td></tr></table></figure>
+
+<p>保存后, 使用 <code>$ docker restart verdaccio</code> 重启 <code>verdaccio</code> 容器, 完成.</p>
+
+	
+	</div>
+  <a type="button" href="/2020/03/23/私有 NPM 仓库搭建记录/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2020/03/22/快速搭建 V2ray/" >快速搭建 V2ray</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2020-03-22  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<p><a href="https://www.v2ray.com/chapter_00/install.html" target="_blank" rel="noopener">官网</a></p>
+<p>V2ray 当前很流行, 相比 ss 更不容易被 ban. 这玩意功能很强大, 配置项太多了, 咱一时半会儿也搞不清楚啊, 先来个最基本的配置, 安排上再说吧</p>
+<h2 id="Linux-一键安装"><a href="#Linux-一键安装" class="headerlink" title="Linux 一键安装"></a>Linux 一键安装</h2><p>官方的嗷</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ bash &lt;(curl -L -s https://install.direct/go.sh)</span><br></pre></td></tr></table></figure>
+
+<h2 id="简单的配置"><a href="#简单的配置" class="headerlink" title="简单的配置"></a>简单的配置</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi /etc/v2ray/config.json</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"log"</span>: &#123;</span><br><span class="line">        <span class="attr">"access"</span>: <span class="string">"/var/log/v2ray/access.log"</span>,</span><br><span class="line">        <span class="attr">"error"</span>: <span class="string">"/var/log/v2ray/error.log"</span>,</span><br><span class="line">        <span class="attr">"loglevel"</span>: <span class="string">"warning"</span></span><br><span class="line">    &#125;,</span><br><span class="line">  <span class="attr">"inbounds"</span>: [&#123;</span><br><span class="line">    <span class="attr">"port"</span>: <span class="number">10086</span>,</span><br><span class="line">    <span class="attr">"protocol"</span>: <span class="string">"vmess"</span>,</span><br><span class="line">    <span class="attr">"settings"</span>: &#123;</span><br><span class="line">      <span class="attr">"clients"</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">"id"</span>: <span class="string">"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"</span>,</span><br><span class="line">          <span class="attr">"level"</span>: <span class="number">1</span>,</span><br><span class="line">          <span class="attr">"alterId"</span>: <span class="number">64</span></span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;],</span><br><span class="line">  <span class="attr">"outbounds"</span>: [&#123;</span><br><span class="line">    <span class="attr">"protocol"</span>: <span class="string">"freedom"</span>,</span><br><span class="line">    <span class="attr">"settings"</span>: &#123;&#125;</span><br><span class="line">  &#125;,&#123;</span><br><span class="line">    <span class="attr">"protocol"</span>: <span class="string">"blackhole"</span>,</span><br><span class="line">    <span class="attr">"settings"</span>: &#123;&#125;,</span><br><span class="line">    <span class="attr">"tag"</span>: <span class="string">"blocked"</span></span><br><span class="line">  &#125;],</span><br><span class="line">  <span class="attr">"routing"</span>: &#123;</span><br><span class="line">    <span class="attr">"rules"</span>: [</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">"type"</span>: <span class="string">"field"</span>,</span><br><span class="line">        <span class="attr">"ip"</span>: [<span class="string">"geoip:private"</span>],</span><br><span class="line">        <span class="attr">"outboundTag"</span>: <span class="string">"blocked"</span></span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>或者直接用 <a href="https://intmainreturn0.com/v2ray-config-gen/" target="_blank" rel="noopener">生成器</a> 生成</p>
+<p>改完配置 <code>systemctl restart v2ray</code> 就完事了, 然后客户端安排</p>
+
+	
+	</div>
+  <a type="button" href="/2020/03/22/快速搭建 V2ray/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2020/03/21/Mac 端使用 Qt 构建 RDM 记录/" >Mac 端使用 Qt 构建 RDM 记录</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2020-03-21  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<ol>
+<li>从 github 克隆 rdm 源码</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone --recursive https:&#x2F;&#x2F;github.com&#x2F;uglide&#x2F;RedisDesktopManager.git -b 0.9.8 rdm &amp;&amp; cd .&#x2F;rdm</span><br></pre></td></tr></table></figure>
+
+
+<p>–recursive 参数使其附带了依赖项的仓库</p>
+<p>指定 0.9.8 分支是因为其后的版本不带 ssh 了??? </p>
+<ol start="2">
+<li>搞配置文件</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cd .&#x2F;src &amp;&amp; cp .&#x2F;resources&#x2F;Info.plist.sample .&#x2F;resources&#x2F;Info.plist</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>编译</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ .&#x2F;configure</span><br></pre></td></tr></table></figure>
+
+<p>依赖 <code>cmake</code> 和 <code>openssl</code>, 如未安装, 先使用 <code>brew</code> 安装它们.</p>
+<blockquote>
+<p>可能出现 <code>error: Compiling for earlier than macOS 10.6 is no longer supported.</code> 错误, 解决方法是: 使用 xcode 打开 <code>3rdparty/gbreakpad/src/client/mac/sender/Breakpad.xib</code> 文件, 在右侧找到 <code>Builds for</code> 选项, 选择一个最近的 macos 版本.</p>
+</blockquote>
+<blockquote>
+<p>可能出现 <code>Error: openssl already installed</code> 错误. 解决办法是编辑 <code>src/configure</code>, 用 <code>#</code> 注释 <code>brew upgrade openssl || brew install openssl || true</code> 行, 还有注意  <code>OPENSSL_ROOT_DIR</code> 要是正确的.</p>
+</blockquote>
+<ol start="4">
+<li>Qt构建</li>
+</ol>
+<p>使用 Qt 打开 <code>src/rdm.pro</code> , 然后在 Qt 中编辑 <code>rdm.pro</code> 文件, 找到 <code>CONFIG-=app_bundle</code> 更改为 <code>CONFIG-=debug</code>. 这一步是为了使构建后生成 .app 程序为文件.</p>
+<p>然后 点击 <code>项目 &gt; Desktop...</code>, 然后构建配置选择 <code>Release</code>, 然后点击左下角的锤子标志开始构建.</p>
+<blockquote>
+<p>这时可能会出现找不到 <code>crashreporter</code> 的错误, 下载它然后放到 构建输出目录( <code>bin/osx/release/</code> )下, 再次开始构建.</p>
+</blockquote>
+<p>构建完成后, 可以在 <code>bin/osx/release/</code> 目录下找到 rdm 了, 此时这个程序只能在本机运行, 因为这个 app 中未包含依赖项.</p>
+<ol start="5">
+<li>混入依赖</li>
+</ol>
+<p>使用 Qt 自带的工具为 app 混入依赖.</p>
+<p>在构建出的 rdm.app 目录中执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ~&#x2F;Qt&#x2F;5.11.0&#x2F;clang_64&#x2F;bin&#x2F;macdeployqt rdm.app -qmldir&#x3D;..&#x2F;..&#x2F;..&#x2F;src&#x2F;qml</span><br></pre></td></tr></table></figure>
+
+<p>完成后,  rdm.app 就可以使用了.</p>
+
+	
+	</div>
+  <a type="button" href="/2020/03/21/Mac 端使用 Qt 构建 RDM 记录/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2020/03/21/CRA起手的项目部署到非根目录/" >CRA 起手的项目部署在非根目录</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2020-03-21  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<p>在 <code>package.json</code> 中使用 <code>homepage</code> 字段指定静态文件所在的路径, 如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;homepage&quot;: &quot;http:&#x2F;&#x2F;localhost:8000&#x2F;build&quot;</span><br></pre></td></tr></table></figure>
+
+<p>在加载静态资源时, 将此地址视为跟目录</p>
+<p>如果使用了前端单页路由, 应替换掉 <code>&lt;Router&gt;</code>, 可以使用 <code>&lt;BrowserRouter&gt;</code>, 并设置 <code>basename</code> 属性, 它是所有位置的基本URL。如果您的应用程序是从服务器上的子目录提供的，则需要将其设置为子目录。格式正确的基本名称应该有一个前导斜杠，但没有尾部斜杠</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;BrowserRouter</span><br><span class="line">  basename&#x3D;&quot;&#x2F;build&quot;</span><br><span class="line">  history&#x3D;&#123;AppHistory&#125;</span><br><span class="line">&gt;</span><br><span class="line">    ....</span><br><span class="line">&lt;&#x2F;BrowserRouter&gt;</span><br></pre></td></tr></table></figure>
+
+<p>如果前端资源不是直接放在静态服务器中, 而是放在后端框架的静态资源目录下(如 php laravel 的 <code>public</code> 目录), 使用 <code>BrowserRouter</code> 会有 <code>404</code> 错误, 可以使用 <code>HashRouter</code></p>
+<blockquote>
+<p>哦??? 使用 <code>HashRouter</code> 之后发现貌似不需要设置 <code>basename</code> 了…</p>
+</blockquote>
+
+	
+	</div>
+  <a type="button" href="/2020/03/21/CRA起手的项目部署到非根目录/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2019/04/20/前端devserver中使用多个env的方法/" >前端 devServer 中使用多个 env 的方法</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2019-04-20  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<p>项目中遇到需要针对多套演示环境来 build, 每套环境需要使用不同的变量的问题.<br>比如不同的环境使用了不同的 api 端口.</p>
+<p>在 package.json 中</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"scripts"</span>: &#123;</span><br><span class="line">    <span class="attr">"start"</span>: <span class="string">"sh -ac '. .env.dev; react-app-rewired start'"</span>,</span><br><span class="line">    <span class="attr">"build:newsta"</span>: <span class="string">"sh -ac '. .env.newsta; react-app-rewired build'"</span>,</span><br><span class="line">    <span class="attr">"build:release"</span>: <span class="string">"sh -ac '. .env.release; react-app-rewired build'"</span>,</span><br><span class="line">    <span class="attr">"test"</span>: <span class="string">"react-app-rewired test --env=jsdom"</span>,</span><br><span class="line">    <span class="attr">"eject"</span>: <span class="string">"react-scripts eject"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>同时创建相应的 .env 文件, 即可在使用不同命令时使用不同的 env<br>如使用 <code>yarn start</code> 命令使用的是 <code>.env.dev</code><br>使用 <code>yarn build:release</code> 命令使用的是 <code>.env.release</code></p>
+<h2 id="更新-CRA官网寻找到的方案-支持-Windows-开发环境"><a href="#更新-CRA官网寻找到的方案-支持-Windows-开发环境" class="headerlink" title="更新: CRA官网寻找到的方案, 支持 Windows 开发环境"></a>更新: CRA官网寻找到的方案, 支持 Windows 开发环境</h2><p>使用 <code>env-cmd</code> 帮助建立 env, 在 <code>package.json</code> 中:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">"scripts": &#123;</span><br><span class="line">  "start": "env-cmd -f .env.dev react-app-rewired start",</span><br><span class="line">  "build": "env-cmd -f .env.build react-app-rewired build",</span><br><span class="line">  "test": "react-scripts test",</span><br><span class="line">  "eject": "react-scripts eject"</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2019/04/20/前端devserver中使用多个env的方法/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2019/03/07/commandLineProxyAlias/" >Command line proxy alias</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2019-03-07  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<p>Put into ~/.zshrc</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> ss=<span class="string">"export http_proxy=http://127.0.0.1:8001; export https_proxy=http://127.0.0.1:8001;"</span></span><br><span class="line"><span class="built_in">alias</span> uss=<span class="string">"unset http_proxy;unset https_proxy;"</span></span><br></pre></td></tr></table></figure>
+
+
+	
+	</div>
+  <a type="button" href="/2019/03/07/commandLineProxyAlias/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2018/08/01/igakki.com使用https记录/" >igakki.com 使用 https 记录</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2018-08-01  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ul>
+<li>centos 7</li>
+<li>nginx</li>
+<li>wordpress</li>
+</ul>
+<h2 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h2><p><a href="https://certbot.eff.org/lets-encrypt/centosrhel7-nginx" target="_blank" rel="noopener">链接</a></p>
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ol>
+<li>启用 EPEL</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ yum install -y yum-utils</span><br><span class="line">$ yum-config-manager --<span class="built_in">enable</span> rhui-REGION-rhel-server-extras rhui-REGION-rhel-server-optional</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>安装 Certbot</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum install python2-certbot-nginx</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>生成并自动配置证书</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ certbot --nginx</span><br></pre></td></tr></table></figure>
+
+<p>按照提示输入相应信息即可自动完成配置</p>
+<p>若想要生成证书后手动配置, 使用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ certbot --nginx certonly</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>续订证书<br>证书可用 90 天, 续订</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ certbot renew</span><br></pre></td></tr></table></figure>
+
+<p>示例: 在每天的中午和午夜自动续订</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ 0 0,12 * * * python -c <span class="string">'import random; import time; time.sleep(random.random() * 3600)'</span> &amp;&amp; certbot renew</span><br></pre></td></tr></table></figure>
+
+<h2 id="可能出现的问题"><a href="#可能出现的问题" class="headerlink" title="可能出现的问题"></a>可能出现的问题</h2><ol>
+<li>不要忘记在防火墙打开 443 端口</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi /etc/sysconfig/iptables</span><br></pre></td></tr></table></figure>
+
+<p>补充如下信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-A INPUT -p tcp -m state --state NEW -m tcp --dport 443 -j ACCEPT</span><br></pre></td></tr></table></figure>
+
+<p>保存后重启防火墙</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ systemctl restart iptables.service</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>浏览器提示证书不安全</li>
+</ol>
+<p>检查 fullchain.pem (具体路径在安装完成时有提示)中是否包含了中间证书<br>安装证书时输入的 domain 与网站 DNS A记录 (或者说 nginx 配置的 server_name ?) 是否匹配 (不能只用根域名, 比如 <a href="http://www.igakki.com">www.igakki.com</a> 不能填写 igakki.com, 虽然都能访问)</p>
+<h2 id="一个自动配置后的-nginx-配置"><a href="#一个自动配置后的-nginx-配置" class="headerlink" title="一个自动配置后的 nginx 配置"></a>一个自动配置后的 nginx 配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    server_name  www.igakki.com;</span><br><span class="line"></span><br><span class="line">    #charset koi8-r;</span><br><span class="line">    #access_log  &#x2F;var&#x2F;log&#x2F;nginx&#x2F;host.access.log  main;</span><br><span class="line"></span><br><span class="line">    root   &#x2F;usr&#x2F;share&#x2F;nginx&#x2F;html&#x2F;wordpress;</span><br><span class="line">    index  index.html index.htm index.php;</span><br><span class="line"></span><br><span class="line">    #error_page  404              &#x2F;404.html;</span><br><span class="line"></span><br><span class="line">    # redirect server error pages to the static page &#x2F;50x.html</span><br><span class="line">    #</span><br><span class="line">    error_page   500 502 503 504  &#x2F;50x.html;</span><br><span class="line">    location &#x3D; &#x2F;50x.html &#123;</span><br><span class="line">        root   &#x2F;usr&#x2F;share&#x2F;nginx&#x2F;html;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    # proxy the PHP scripts to Apache listening on 127.0.0.1:80</span><br><span class="line">    #</span><br><span class="line">    #location ~ \.php$ &#123;</span><br><span class="line">    #    proxy_pass   http:&#x2F;&#x2F;127.0.0.1;</span><br><span class="line">    #&#125;</span><br><span class="line"></span><br><span class="line">    # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000</span><br><span class="line">    #</span><br><span class="line">    location ~ \.php$ &#123;</span><br><span class="line">        fastcgi_pass   127.0.0.1:9000;</span><br><span class="line">        fastcgi_index  index.php;</span><br><span class="line">        fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;</span><br><span class="line">        include        fastcgi_params;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    # deny access to .htaccess files, if Apache&#39;s document root</span><br><span class="line">    # concurs with nginx&#39;s one</span><br><span class="line">    #</span><br><span class="line">    #location ~ &#x2F;\.ht &#123;</span><br><span class="line">    #    deny  all;</span><br><span class="line">    #&#125;</span><br><span class="line"></span><br><span class="line">    listen 443 ssl; # managed by Certbot</span><br><span class="line">    ssl_certificate &#x2F;etc&#x2F;letsencrypt&#x2F;live&#x2F;www.igakki.com&#x2F;fullchain.pem; # managed by Certbot</span><br><span class="line">    ssl_certificate_key &#x2F;etc&#x2F;letsencrypt&#x2F;live&#x2F;www.igakki.com&#x2F;privkey.pem; # managed by Certbot</span><br><span class="line">    include &#x2F;etc&#x2F;letsencrypt&#x2F;options-ssl-nginx.conf; # managed by Certbot</span><br><span class="line">    ssl_dhparam &#x2F;etc&#x2F;letsencrypt&#x2F;ssl-dhparams.pem; # managed by Certbot</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">    if ($host &#x3D; www.igakki.com) &#123;</span><br><span class="line">        return 301 https:&#x2F;&#x2F;$host$request_uri;</span><br><span class="line">    &#125; # managed by Certbot</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    if ($host &#x3D; igakki.com) &#123;</span><br><span class="line">        return 301 https:&#x2F;&#x2F;$host$request_uri;</span><br><span class="line">    &#125; # managed by Certbot</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    listen       80;</span><br><span class="line">    server_name  www.igakki.com;</span><br><span class="line">    return 404; # managed by Certbot</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2018/08/01/igakki.com使用https记录/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2018/01/27/在VSCode中使用cmder/" >在 VSCode 中使用 cmder</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2018-01-27  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<p>下载 cmder ,将其解压到要安装的目录.<br>设置 <code>cmder.exe</code> 使用管理员权限运行, 防止使用中权限不足. 右键 <code>cmder.exe</code> &gt; 属性 &gt; 兼容性 , 勾选 <code>以管理员身份运行此程序</code> &gt; 确定 .</p>
+<p>在 <code>cmder.exe</code> 同级目录下, 新建 <code>vscode.bat</code> 文件, 输入以下内容:</p>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">SET</span> CMDER_ROOT=C:\Program Files (x86)\cmder     #这里是 cmder 的安装路径</span><br><span class="line">"<span class="variable">%CMDER_ROOT%</span>\vendor\init.bat"</span><br></pre></td></tr></table></figure>
+
+<p>打开 VScode , 选择 文件 &gt; 首选项 &gt; 设置 , 添加如下选项:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">"terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",</span><br><span class="line">"terminal.integrated.shellArgs.windows": [</span><br><span class="line">    "/K",</span><br><span class="line">    "C:\\Program Files (x86)\\cmder\\vscode.bat"        #刚才新建的 vscode.bat 的路径, 注意斜线位置要有转义符</span><br><span class="line">],</span><br></pre></td></tr></table></figure>
+
+<p><code>ctrl + s</code> 保存后, 按 <code>ctrl + ~</code> 打开 vscode 终端, 点击右侧的垃圾桶(终止终端)标志将目前的终端窗口删除, 然后按加号(新建终端)新建终端, 新建的终端就调用 cmder 了.</p>
+<ul>
+<li>cmder 环境变量问题</li>
+</ul>
+<p>我们在 windows 系统设置中手动定义环境变量后, 在 cmd 中可以正常使用, 但是在 cmder 中不能使用, 要单独在 cmder 的设置中定义才可以, 很麻烦.<br>解决方法是, 在系统环境变量中, 添加 cmder 的路径, 并将其顺序向上移动到第一顺位.<br>这样在下面定义的环境变量就都可以在 cmder 中使用了.</p>
+
+	
+	</div>
+  <a type="button" href="/2018/01/27/在VSCode中使用cmder/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2018/01/22/一些js/" >一些 JS</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2018-01-22  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 数组去重</span><br><span class="line"> *</span><br><span class="line"> **&#x2F;</span><br><span class="line">function unique (arr) &#123;</span><br><span class="line">    const seen &#x3D; new Map()</span><br><span class="line">    return arr.filter((a) &#x3D;&gt; !seen.has(a - 0) &amp;&amp; seen.set(a - 0, 1))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 插入排序</span><br><span class="line"> *</span><br><span class="line"> **&#x2F;</span><br><span class="line">function insertSort (arr) &#123;</span><br><span class="line">    let len &#x3D; arr.length;</span><br><span class="line">    for (let i &#x3D; 1; i &lt; len; i++) &#123;</span><br><span class="line">        let temp &#x3D; arr[i],</span><br><span class="line">            j;</span><br><span class="line">        for (j &#x3D; i - 1; j &gt;&#x3D; 0 &amp;&amp; temp &lt; arr[j]; j--) &#123;</span><br><span class="line">            arr[j + 1] &#x3D; arr[j];</span><br><span class="line">        &#125;</span><br><span class="line">        arr[j + 1] &#x3D; temp;</span><br><span class="line">    &#125;</span><br><span class="line">    return arr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 获取url参数</span><br><span class="line"> *</span><br><span class="line"> **&#x2F;</span><br><span class="line">let url &#x3D; window.location.search;</span><br><span class="line">    url &#x3D; url.substring(url.indexOf(&#39;?&#39;) + 1, url.length);</span><br><span class="line">function getQueryString(name) &#123;</span><br><span class="line">    let reg &#x3D; new RegExp(&quot;(^|&amp;)&quot; + name + &quot;&#x3D;([^&amp;]*)(&amp;|$)&quot;, &quot;i&quot;);</span><br><span class="line">    let r &#x3D; url.match(reg);</span><br><span class="line">    if (r !&#x3D; null) return (r[2]);</span><br><span class="line">    return null;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 去掉字符串中的 html 标签</span><br><span class="line"> **&#x2F;</span><br><span class="line">str &#x3D; str.replace(&#x2F;&lt;[^&gt;]+&gt;&#x2F;g, &quot;&quot;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;**</span><br><span class="line"> * 原生方法格式化时间</span><br><span class="line"> **&#x2F;</span><br><span class="line">const dateTimeString &#x3D; new Intl.DateTimeFormat(&#39;zh&#39;,&#123;</span><br><span class="line">    hour12: false,</span><br><span class="line">    year: &#39;numeric&#39;,</span><br><span class="line">    month: &#39;2-digit&#39;,</span><br><span class="line">    day: &#39;2-digit&#39;,</span><br><span class="line">    hour: &#39;2-digit&#39;,</span><br><span class="line">    minute: &#39;2-digit&#39;,</span><br><span class="line">    second: &#39;2-digit&#39;</span><br><span class="line">&#125;).format(new Date()).replace(&#x2F;\&#x2F;&#x2F;g, &#39;-&#39;);</span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2018/01/22/一些js/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+
+		</div>
+
+		<!-- pagination -->
+		<div>
+  		<center>
+		<div class="pagination">
+
+   
+    
+           <a type="button" class="btn btn-default disabled"><i class="fa fa-arrow-circle-o-left"></i>Prev</a>
+        
+
+        <a href="/" type="button" class="btn btn-default"><i class="fa fa-home"></i>Home</a>
+ 
+       <a href="/page/2/" type="button" class="btn btn-default ">Next<i class="fa fa-arrow-circle-o-right"></i></a>     
+        
+
+  
+</div>
+
+  		</center>
+		</div>
+
+		
+		
+	</div> <!-- col-md-9 -->
+
+	
+		<div class="col-md-3">
+	<div id="sidebar">
+	
+			
+  <div id="site_search">
+   <div class="form-group">
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
+   </div>  
+  <div id="local-search-result"></div>
+  </div>
+
+
+		
+			
+		
+			
+
+		
+			
+<div class="widget">
+  <h4>Recent Posts</h4>
+  <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2020/03/23/方便地在 Linux 上 安装 Node.js/" ><i class="fa fa-file-o"></i>方便地在 Linux 上安装 Node.js</a>
+      </li>
+    
+      <li>
+        <a href="/2020/03/23/私有 NPM 仓库搭建记录/" ><i class="fa fa-file-o"></i>私有 NPM 仓库搭建记录</a>
+      </li>
+    
+      <li>
+        <a href="/2020/03/22/快速搭建 V2ray/" ><i class="fa fa-file-o"></i>快速搭建 V2ray</a>
+      </li>
+    
+      <li>
+        <a href="/2020/03/21/Mac 端使用 Qt 构建 RDM 记录/" ><i class="fa fa-file-o"></i>Mac 端使用 Qt 构建 RDM 记录</a>
+      </li>
+    
+      <li>
+        <a href="/2020/03/21/CRA起手的项目部署到非根目录/" ><i class="fa fa-file-o"></i>CRA 起手的项目部署在非根目录</a>
+      </li>
+    
+  </ul>
+</div>
+
+		
+			
+<div class="widget">
+	<h4>Links</h4>
+	<ul class="blogroll list-unstyled">
+	
+		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/hexo-theme-freemind" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
+	
+		<li><i class="fa fa-github"></i><a href="https://github.com/kristopolous/BOOTSTRA.386" title="BOOTSTRA.386's Github repository." target="_blank"]);">BOOTSTRA.386</a></li>
+	
+		<li><i class="fa fa-github"></i><a href="https://github.com/blackshow/hexo-theme-freemind.386" title="Freemind.386's Github repository." target="_blank"]);">Freemind.386</a></li>
+	
+		<li><i class="fa fa-github"></i><a href="http://www.github.com/blackshow" title="My Github account." target="_blank"]);">My Github</a></li>
+	
+	</ul>
+</div>
+
+
+		
+	</div> <!-- sidebar -->
+</div> <!-- col-md-3 -->
+
+	
+	
+</div> <!-- row-fluid -->
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2020 Chan
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a>,<a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>,<a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a> and <a href="http://getbootstrap.com/" target="_blank">BOOTSTRA.386</a>. 
+     <br> Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind.386</a>.    
+</p>
+ </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>⬆︎TOP</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+</body>
+   </html>

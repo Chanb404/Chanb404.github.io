@@ -1,0 +1,330 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  
+  <title>Sublime 常用快捷键 | Chan&#39;s Blog</title>
+  <meta name="author" content="Chan">
+  
+  <meta name="description" content="bb">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Sublime 常用快捷键"/>
+  <meta property="og:site_name" content="Chan&#39;s Blog"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-70812759-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?cb5448498d7169c668b07c2b255d62c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">Chan&#39;s Blog</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class=""></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class=""></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class=""></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class=""></i>About
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="Subscribe me.">
+			  <i class=""></i>RSS
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">
+			<h1> Sublime 常用快捷键</h1>
+		</div>
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>解决sublime text 总是在新窗口中打开文件<br>Preferences -&gt; Settings – Default -&gt; 搜索open_files_in_new_window，将其true 改为 false 后</p>
+<p>自动安装Package Control：<br>1、通过快捷键 ctrl+` 或者 View &gt; Show Console 菜单打开控制台</p>
+<p>2、粘贴对应版本的代码后回车安装</p>
+<p>适用于 Sublime Text 3：<br>import urllib.request,os;pf=’Package Control.sublime-package’;ipp=sublime.installed_packages_path();urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler()));open(os.path.join(ipp,pf),’wb’).write(urllib.request.urlopen(‘<a href="http://sublime.wbond.net/&#39;+pf.replace" target="_blank" rel="noopener">http://sublime.wbond.net/&#39;+pf.replace</a>(‘ ‘,’%20’)).read())<br>离线安装:<br>下载包：<a href="http://github.com/wbond/sublime_package_control" target="_blank" rel="noopener">http://github.com/wbond/sublime_package_control</a><br>解压，并目录改名为 Package Control<br>Preferences-&gt;browse packages 会打开一个目录，然后将刚才的文件夹复制进来。<br>重新打开sublime text后生效</p>
+<p>接下来一定记住先重启软件！<br><a href="https://packagecontrol.io/browse" target="_blank" rel="noopener">https://packagecontrol.io/browse</a> 可用插件列表<br>使用:<br>ctrl+shift+p<br>install package<br>remove package</p>
+<p>编辑器主题 Aprosopo<br>install package -&gt; Theme Aprosopo</p>
+<p>BracketHighlighter (括弧高亮显示)</p>
+<p>SideBarEnhancements (目录管理右键功能)</p>
+<p>ConverToUTF8 (支持UTF-8编码)<br>注：建议修改快捷键，避免与其它冲突。<br>Sublime Text3/Packages/ConverToUTF8/Default (OSX).sublime-keymap</p>
+<p>GBK4subl (使sublime支持gbk编码)<br>需要下载插件：<a href="https://github.com/jeewood/gbk4subl" target="_blank" rel="noopener">https://github.com/jeewood/gbk4subl</a><br>解压后将目录复制到 Sublime Text3/Packages/<br>目录改名为 gbk4subl<br>重启程序</p>
+<p>CSS Format (整理 CSS 格式)</p>
+<p>TrailingSpaces (高亮显示行尾多余空格和Tab，可一键删除)</p>
+<p>Color Picker<br>需要下载插件：<a href="https://github.com/weslly/ColorPicker" target="_blank" rel="noopener">https://github.com/weslly/ColorPicker</a><br>解压后将目录复制到 Sublime Text3/Packages/<br>目录改名为 ColorPicker<br>重启程序<br>使用： mac command+shift+c<br>windows ctrl+shift+c<br>注：如果快捷键失效，有可能是其它插件快捷键冲突（converToUTF8可能性很大）</p>
+<p>Better Completion (支持Javascript、JQuery、Twitter Bootstrap框架、HTML5标签属性提示的插件)<br><a href="https://github.com/Pleasurazy/Sublime-Better-Completion" target="_blank" rel="noopener">https://github.com/Pleasurazy/Sublime-Better-Completion</a><br>install package<br>需重启</p>
+<p>Emmet (HTML CSS 编辑神器)<br>需重启<br>测试：<br>文档中输入 ul＃books&gt;li<em>6 之后 ctrl+e 生成<br>zencoding控制台（ctrl+alt+enter） 输入 ul＃books&gt;li</em>6</p>
+<p>DocBlockr (自动注释，自动解析函数、变量、参数)<br>需重启<br>使用： 在function、var 上一行输入－》 /**回车</p>
+<p>MarkdownEditing（markdown格式查看，编辑）</p>
+<p>JsFormat（将压缩的.min.js格式化）</p>
+<p>Minify（压缩js,css）</p>
+<p>SublimeCodeintel (支持方法跳转和自动提示)</p>
+<p>SFTP (ftp,sftp)</p>
+<p>Evernote<br>Preferences -&gt; Package Control:Install Package -&gt; evernote</p>
+<p>获得evernote api接口 Developer Tokens<br>Preferences -&gt; Package Settings -&gt; Evernote -&gt; Reconfigure Authorization</p>
+<p>会在浏览器中打开 <a href="https://www.evernote.com/api/DeveloperToken.action" target="_blank" rel="noopener">https://www.evernote.com/api/DeveloperToken.action</a><br>如果是中国区 印象笔记用户请直接打开 <a href="https://app.yinxiang.com/api/DeveloperToken.action" target="_blank" rel="noopener">https://app.yinxiang.com/api/DeveloperToken.action</a><br>申请好Token</p>
+<p>插件 Evernote配置<br>Preferences -&gt; Package Settings -&gt; Evernote -&gt; Settings – User<br>输入 developer token 与 url<br>保存后就可以使用了</p>
+<p>Sublime Text 3 快捷键精华版</p>
+<p>Ctrl+Shift+P：打开命令面板<br>Ctrl+P：搜索项目中的文件<br>Ctrl+G：跳转到第几行<br>Ctrl+W：关闭当前打开文件<br>Ctrl+Shift+W：关闭所有打开文件<br>Ctrl+Shift+V：粘贴并格式化<br>Ctrl+D：选择单词，重复可增加选择下一个相同的单词<br>Ctrl+L：选择行，重复可依次增加选择下一行<br>Ctrl+Shift+L：选择多行<br>Ctrl+Shift+Enter：在当前行前插入新行<br>Ctrl+X：删除当前行<br>Ctrl+M：跳转到对应括号<br>Ctrl+U：软撤销，撤销光标位置<br>Ctrl+J：选择标签内容<br>Ctrl+F：查找内容<br>Ctrl+Shift+F：查找并替换<br>Ctrl+H：替换<br>Ctrl+R：前往 method<br>Ctrl+N：新建窗口<br>Ctrl+K+B：开关侧栏<br>Ctrl+Shift+M：选中当前括号内容，重复可选着括号本身<br>Ctrl+F2：设置/删除标记<br>Ctrl+/：注释当前行<br>Ctrl+Shift+/：当前位置插入注释<br>Ctrl+Alt+/：块注释，并Focus到首行，写注释说明用的<br>Ctrl+Shift+A：选择当前标签前后，修改标签用的<br>F11：全屏<br>Shift+F11：全屏免打扰模式，只编辑当前文件<br>Alt+F3：选择所有相同的词<br>Alt+.：闭合标签<br>Alt+Shift+数字：分屏显示<br>Alt+数字：切换打开第N个文件<br>Shift+右键拖动：光标多不，用来更改或插入列内容<br>鼠标的前进后退键可切换Tab文件<br>按Ctrl，依次点击或选取，可需要编辑的多个位置<br>按Ctrl+Shift+上下键，可替换行<br>选择类</p>
+<p>Ctrl+D 选中光标所占的文本，继续操作则会选中下一个相同的文本。</p>
+<p>Alt+F3 选中文本按下快捷键，即可一次性选择全部的相同文本进行同时编辑。举个栗子：快速选中并更改所有相同的变量名、函数名等。</p>
+<p>Ctrl+L 选中整行，继续操作则继续选择下一行，效果和 Shift+↓ 效果一样。</p>
+<p>Ctrl+Shift+L 先选中多行，再按下快捷键，会在每行行尾插入光标，即可同时编辑这些行。</p>
+<p>Ctrl+Shift+M 选择括号内的内容（继续选择父括号）。举个栗子：快速选中删除函数中的代码，重写函数体代码或重写括号内里的内容。</p>
+<p>Ctrl+M 光标移动至括号内结束或开始的位置。</p>
+<p>Ctrl+Enter 在下一行插入新行。举个栗子：即使光标不在行尾，也能快速向下插入一行。</p>
+<p>Ctrl+Shift+Enter 在上一行插入新行。举个栗子：即使光标不在行首，也能快速向上插入一行。</p>
+<p>Ctrl+Shift+[ 选中代码，按下快捷键，折叠代码。</p>
+<p>Ctrl+Shift+] 选中代码，按下快捷键，展开代码。</p>
+<p>Ctrl+K+0 展开所有折叠代码。</p>
+<p>Ctrl+← 向左单位性地移动光标，快速移动光标。</p>
+<p>Ctrl+→ 向右单位性地移动光标，快速移动光标。</p>
+<p>shift+↑ 向上选中多行。</p>
+<p>shift+↓ 向下选中多行。</p>
+<p>Shift+← 向左选中文本。</p>
+<p>Shift+→ 向右选中文本。</p>
+<p>Ctrl+Shift+← 向左单位性地选中文本。</p>
+<p>Ctrl+Shift+→ 向右单位性地选中文本。</p>
+<p>Ctrl+Shift+↑ 将光标所在行和上一行代码互换（将光标所在行插入到上一行之前）。</p>
+<p>Ctrl+Shift+↓ 将光标所在行和下一行代码互换（将光标所在行插入到下一行之后）。</p>
+<p>Ctrl+Alt+↑ 向上添加多行光标，可同时编辑多行。</p>
+<p>Ctrl+Alt+↓ 向下添加多行光标，可同时编辑多行。</p>
+<p>编辑类</p>
+<p>Ctrl+J 合并选中的多行代码为一行。举个栗子：将多行格式的CSS属性合并为一行。</p>
+<p>Ctrl+Shift+D 复制光标所在整行，插入到下一行。</p>
+<p>Tab 向右缩进。</p>
+<p>Shift+Tab 向左缩进。</p>
+<p>Ctrl+K+K 从光标处开始删除代码至行尾。</p>
+<p>Ctrl+Shift+K 删除整行。</p>
+<p>Ctrl+/ 注释单行。</p>
+<p>Ctrl+Shift+/ 注释多行。</p>
+<p>Ctrl+K+U 转换大写。</p>
+<p>Ctrl+K+L 转换小写。</p>
+<p>Ctrl+Z 撤销。</p>
+<p>Ctrl+Y 恢复撤销。</p>
+<p>Ctrl+U 软撤销，感觉和 Gtrl+Z 一样。</p>
+<p>Ctrl+F2 设置书签</p>
+<p>Ctrl+T 左右字母互换。</p>
+<p>F6 单词检测拼写</p>
+<p>搜索类</p>
+<p>Ctrl+F 打开底部搜索框，查找关键字。</p>
+<p>Ctrl+shift+F 在文件夹内查找，与普通编辑器不同的地方是sublime允许添加多个文件夹进行查找，略高端，未研究。</p>
+<p>Ctrl+P 打开搜索框。举个栗子：1、输入当前项目中的文件名，快速搜索文件，2、输入@和关键字，查找文件中函数名，3、输入：和数字，跳转到文件中该行代码，4、输入#和关键字，查找变量名。</p>
+<p>Ctrl+G 打开搜索框，自动带：，输入数字跳转到该行代码。举个栗子：在页面代码比较长的文件中快速定位。</p>
+<p>Ctrl+R 打开搜索框，自动带@，输入关键字，查找文件中的函数名。举个栗子：在函数较多的页面快速查找某个函数。</p>
+<p>Ctrl+： 打开搜索框，自动带#，输入关键字，查找文件中的变量名、属性名等。</p>
+<p>Ctrl+Shift+P 打开命令框。场景栗子：打开命名框，输入关键字，调用sublime text或插件的功能，例如使用package安装插件。</p>
+<p>Esc 退出光标多行选择，退出搜索框，命令框等。</p>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+
+    
+    
+    <a href="/2017/09/02/Weex2.0中的一些坑/" type="button" class="btn btn-default"><i
+                class="fa fa-arrow-circle-o-left"></i> Prev</a>
+    
+
+    <a href="/" type="button" class="btn btn-default"><i class="fa fa-home"></i>Home</a>
+    
+    <a href="/2017/08/03/建立WordPress站点遇到的一些问题/" type="button" class="btn btn-default ">Next<i
+                class="fa fa-arrow-circle-o-right"></i></a>
+    
+
+    
+</div>
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+    <h2 class="title">Comments</h2>
+
+    
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2017-08-05 
+	</div>
+	
+
+	<!-- categories -->
+    
+
+	<!-- tags -->
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2020 Chan
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a>,<a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind</a>,<a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a> and <a href="http://getbootstrap.com/" target="_blank">BOOTSTRA.386</a>. 
+     <br> Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/" target="_blank" rel="noopener">Freemind.386</a>.    
+</p>
+ </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>⬆︎TOP</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+</body>
+   </html>
