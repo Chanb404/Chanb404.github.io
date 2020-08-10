@@ -6,7 +6,7 @@
   <meta http-equiv="cache-control" content="no-cache">
   <meta http-equiv="expires" content="0">
   
-  <title>前端 | Chan&#39;s Blog</title>
+  <title>Windows 更新出错导致的蓝屏问题解决 | Chan&#39;s Blog</title>
   <meta name="author" content="Chan">
   
   <meta name="description" content="bb">
@@ -14,7 +14,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="Windows 更新出错导致的蓝屏问题解决"/>
   <meta property="og:site_name" content="Chan&#39;s Blog"/>
 
   
@@ -88,127 +88,102 @@
   	<div class="content">
     	 
 
-<!-- title -->
-<div class="page-header">
-  <h1 class="archive-title-category"><i class="fa fa-archive"></i> 前端</h1>
-</div>
 
-<div class="row page">
-  <!-- cols -->
-  
-  <div class="col-md-9">
 	
-
-	  <div id="top_search"></div>
-
-	  <div class="archive">
-		
-		
-		
-			
-			
-			<h4 class="archive-ul" data-toggle="collapse" data-target="#2020">2020<b class="caret"></b></h4>
-			<ul id="2020" class="collapse in">
-			
-		
-		<li class="listing-item">
-		<span class="date_class"> 2020-04-02 </span> &raquo;
-		
-		   <span class="title"><a href="/2020/04/02/在 CRA 项目中使用 WebWorker/" >在 CRA 项目中使用 WebWorker</a></span>
-		
-		</li>			
-		
-		</ul>
+		<div class="page-header">
+			<h1> Windows 更新出错导致的蓝屏问题解决</h1>
 		</div>
-
-</div> <!-- col-md-9/col-md-12 -->
-
-
-<div class="col-md-3">
-	<div id="sidebar">
 	
-			
-  <div id="site_search">
-   <div class="form-group">
-    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
-   </div>  
-  <div id="local-search-result"></div>
-  </div>
 
 
-		
-			
-	<div class="widget">
-		<h4>Categories</h4>
-		<ul class="tag_box inline list-unstyled">
-		
-			<li><a href="/categories/前端/">前端<span>1</span></a></li>
-		
-		</ul>
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <p>Windows 太不省心, 关机时选择 <code>更新并关机</code> 结果第二天开机直接蓝屏, 错误码 <code>0xc000021a</code>, 在 Recovery 中自动修复失败, 卸载最后一次更新失败.<br>给👴整懵了.</p>
+<p>找到来自 <a href="https://blog.csdn.net/wm9028/article/details/88133443" target="_blank" rel="noopener">CSDN 一博主的解决方案</a>, 有效, 在此记录.</p>
+<ol>
+<li>在 Recovery 页面进入命令行, 使用 <code>c:</code> 命令进入系统盘</li>
+<li>命令 <code>dism /image:c:\ /cleanup-image /revertpendingactions</code></li>
+<li>命令 <code>exit</code></li>
+</ol>
+<p>执行完成后重启即可. 未使用到原博中第四步内容.</p>
+<p>原博中还备注了一个<a href="https://neosmart.net/wiki/0xc000021a/" target="_blank" rel="noopener">其他解决方案的链接</a>,  上面的操作解决不了的时候可以尝试一下.</p>
+	  
 	</div>
 
-		
-			
-	<div class="widget">
-		<h4>Tag Cloud</h4>
-		<ul class="tag_box inline list-unstyled">		
-		
-			<li><a href="/tags/create-react-app/">create-react-app<span>1</span></a></li>
-		
-			<li><a href="/tags/react/">react<span>1</span></a></li>
-		
-			<li><a href="/tags/WebWorker/">WebWorker<span>1</span></a></li>
-		
-		 
-		</ul>
+	<div>
+  	<center>
+	<div class="pagination">
+
+    
+    
+    <a href="/2020/08/10/Docker 相关笔记/" type="button" class="btn btn-default"><i
+                class="fa fa-arrow-circle-o-left"></i> Prev</a>
+    
+
+    <a href="/" type="button" class="btn btn-default"><i class="fa fa-home"></i>Home</a>
+    
+    <a href="/2020/04/02/在 CRA 项目中使用 WebWorker/" type="button" class="btn btn-default ">Next<i
+                class="fa fa-arrow-circle-o-right"></i></a>
+    
+
+    
+</div>
+
+    </center>
 	</div>
-
-
-		
-			
-<div class="widget">
-  <h4>Recent Posts</h4>
-  <ul class="entry list-unstyled">
-    
-      <li>
-        <a href="/2020/08/10/Docker 相关笔记/" ><i class="fa fa-file-o"></i>Docker 相关笔记</a>
-      </li>
-    
-      <li>
-        <a href="/2020/08/10/Windows 更新出错导致的蓝屏问题解决/" ><i class="fa fa-file-o"></i>Windows 更新出错导致的蓝屏问题解决</a>
-      </li>
-    
-      <li>
-        <a href="/2020/04/02/在 CRA 项目中使用 WebWorker/" ><i class="fa fa-file-o"></i>在 CRA 项目中使用 WebWorker</a>
-      </li>
-    
-      <li>
-        <a href="/2020/03/23/方便地在 Linux 上 安装 Node.js/" ><i class="fa fa-file-o"></i>方便地在 Linux 上安装 Node.js</a>
-      </li>
-    
-      <li>
-        <a href="/2020/03/23/私有 NPM 仓库搭建记录/" ><i class="fa fa-file-o"></i>私有 NPM 仓库搭建记录</a>
-      </li>
-    
-  </ul>
-</div>
-
-		
-			
-<div class="widget">
-	<h4>Links</h4>
-	<ul class="blogroll list-unstyled">
 	
-		<li><i class="fa fa-github"></i><a href="http://www.github.com/chen9959" title="My Github." target="_blank"]);">Github</a></li>
+	<!-- comment -->
 	
-	</ul>
-</div>
+<section id="comment">
+    <h2 class="title">Comments</h2>
+
+    
+</section>
 
 
+	</div> <!-- col-md-9/col-md-12 -->
 		
-	</div> <!-- sidebar -->
-</div> <!-- col-md-3 -->
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
 
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2020-08-10 
+	</div>
+	
+
+	<!-- categories -->
+    
+
+	<!-- tags -->
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
 
 
 

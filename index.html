@@ -116,6 +116,94 @@
 <div class="row">
 	<div class="col-md-8">
 		<h3 class="title">
+			<a href="/2020/08/10/Docker 相关笔记/" >Docker 相关笔记</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2020-08-10  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<h2 id="在-CentOS-7-系统上安装"><a href="#在-CentOS-7-系统上安装" class="headerlink" title="在 CentOS 7 系统上安装"></a>在 CentOS 7 系统上安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ yum install -y yum-utils device-mapper-persistent-data lvm2</span><br><span class="line">$ yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</span><br><span class="line">$ yum-config-manager --<span class="built_in">enable</span> docker-ce-edge</span><br><span class="line">$ yum install docker-ce</span><br><span class="line">$ systemctl <span class="built_in">enable</span> docker</span><br><span class="line">$ systemctl start docker</span><br></pre></td></tr></table></figure>
+
+<h2 id="docker-compose-的安装"><a href="#docker-compose-的安装" class="headerlink" title="docker-compose 的安装"></a>docker-compose 的安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compose-`uname -s`-`uname -m` -o /usr/<span class="built_in">local</span>/bin/docker-compose</span><br><span class="line">$ chmod +x /usr/<span class="built_in">local</span>/bin/docker-compose</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用命令启动容器示例"><a href="#使用命令启动容器示例" class="headerlink" title="使用命令启动容器示例:"></a>使用命令启动容器示例:</h2><p>涉及到了 端口映射, 文件映射 和 容器关联 相关参数</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -d --name=cartoapi2  -p 8080:80 -v /root/cartoapi/.env:/app/.env --restart=always registry.cn-beijing.aliyuncs.com/newsta-sc/qianfang-api</span><br><span class="line">$ docker run -d --name=cartoweb3  -p 80:80  --restart=always -v /root/cartoweb/Constant.js:/usr/share/nginx/html/static/Constant.js   --link cartoapi2:cartoapi registry.cn-beijing.aliyuncs.com/newsta-sc/qianfang-web</span><br></pre></td></tr></table></figure>
+
+<h2 id="查看最后几条日志-实时"><a href="#查看最后几条日志-实时" class="headerlink" title="查看最后几条日志+实时"></a>查看最后几条日志+实时</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker logs -f —tail=100 container_name</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置Docker容器日志文件大小限制"><a href="#设置Docker容器日志文件大小限制" class="headerlink" title="设置Docker容器日志文件大小限制"></a>设置Docker容器日志文件大小限制</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi /etc/docker/daemon.json</span><br></pre></td></tr></table></figure>
+
+<p>增加以下配置</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// max-size: 500m，表示一个容器日志大小上限是500M</span></span><br><span class="line"><span class="comment">// max-file: 3, 表示一个容器最多可以生成 3 个日志文件</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="attr">"log-driver"</span>:<span class="string">"json-file"</span>,</span><br><span class="line">  <span class="attr">"log-opts"</span>: &#123;<span class="attr">"max-size"</span>:<span class="string">"500m"</span>, <span class="attr">"max-file"</span>:<span class="string">"3"</span>&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后重启 docker 守护进程</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ systemctl daemon-reload</span><br><span class="line">$ systemctl restart docker</span><br></pre></td></tr></table></figure>
+
+<h2 id="清理空间"><a href="#清理空间" class="headerlink" title="清理空间"></a>清理空间</h2><ol>
+<li>清理无用镜像</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker image prune -a -f</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>清空现有日志脚本</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh </span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"======== start clean docker containers logs ========"</span>  </span><br><span class="line"></span><br><span class="line">logs=$(find /var/lib/docker/containers/ -name *-json.log)  </span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> <span class="built_in">log</span> <span class="keyword">in</span> <span class="variable">$logs</span>  </span><br><span class="line">        <span class="keyword">do</span>  </span><br><span class="line">                <span class="built_in">echo</span> <span class="string">"clean logs : <span class="variable">$log</span>"</span>  </span><br><span class="line">                cat /dev/null &gt; <span class="variable">$log</span>  </span><br><span class="line">        <span class="keyword">done</span>  </span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"======== end clean docker containers logs ========"</span></span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2020/08/10/Docker 相关笔记/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2020/08/10/Windows 更新出错导致的蓝屏问题解决/" >Windows 更新出错导致的蓝屏问题解决</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2020-08-10  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<p>Windows 太不省心, 关机时选择 <code>更新并关机</code> 结果第二天开机直接蓝屏, 错误码 <code>0xc000021a</code>, 在 Recovery 中自动修复失败, 卸载最后一次更新失败.<br>给👴整懵了.</p>
+<p>找到来自 <a href="https://blog.csdn.net/wm9028/article/details/88133443" target="_blank" rel="noopener">CSDN 一博主的解决方案</a>, 有效, 在此记录.</p>
+<ol>
+<li>在 Recovery 页面进入命令行, 使用 <code>c:</code> 命令进入系统盘</li>
+<li>命令 <code>dism /image:c:\ /cleanup-image /revertpendingactions</code></li>
+<li>命令 <code>exit</code></li>
+</ol>
+<p>执行完成后重启即可. 未使用到原博中第四步内容.</p>
+<p>原博中还备注了一个<a href="https://neosmart.net/wiki/0xc000021a/" target="_blank" rel="noopener">其他解决方案的链接</a>,  上面的操作解决不了的时候可以尝试一下.</p>
+
+	
+	</div>
+  <a type="button" href="/2020/08/10/Windows 更新出错导致的蓝屏问题解决/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
 			<a href="/2020/04/02/在 CRA 项目中使用 WebWorker/" >在 CRA 项目中使用 WebWorker</a>
 		</h3>
 		</div>
@@ -329,60 +417,6 @@
 </div>
 
 		
-			
-	
-	<!-- display as entry -->
-<div class="row">
-	<div class="col-md-8">
-		<h3 class="title">
-			<a href="/2018/08/01/igakki.com使用https记录/" >igakki.com 使用 https 记录</a>
-		</h3>
-		</div>
-	<div class="col-md-4">
-		<div class="date">post @ 2018-08-01  </div>
-		</div>
-	</div>
-	
-
-
-			<div class="entry">
-  <div class="row">
-	
-	
-		<p>之前 blog 没放在 GitPages, 是在 VPS 上手动搭建的 Wordpress, 这里介绍当时给战站点上 HTTPS 的方法.</p>
-	
-	</div>
-  <a type="button" href="/2018/08/01/igakki.com使用https记录/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
-			
-	
-	<!-- display as entry -->
-<div class="row">
-	<div class="col-md-8">
-		<h3 class="title">
-			<a href="/2018/01/27/在VSCode中使用cmder/" >在 VSCode 中使用 cmder</a>
-		</h3>
-		</div>
-	<div class="col-md-4">
-		<div class="date">post @ 2018-01-27  </div>
-		</div>
-	</div>
-	
-
-
-			<div class="entry">
-  <div class="row">
-	
-	
-		<p>cmder 是 windows 平台用来代替 cmd 和 powershell 的很好的工具, 对于习惯操作 Linux 的人来说要顺手许多.<br>这里介绍的是如何在 VSCode 中调用 cmder.</p>
-	
-	</div>
-  <a type="button" href="/2018/01/27/在VSCode中使用cmder/#more" class="btn btn-default more">Read More</a>
-</div>
-
-		
 
 		</div>
 
@@ -441,9 +475,9 @@
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/react/">react<span>1</span></a></li>
-		
 			<li><a href="/tags/create-react-app/">create-react-app<span>1</span></a></li>
+		
+			<li><a href="/tags/react/">react<span>1</span></a></li>
 		
 			<li><a href="/tags/WebWorker/">WebWorker<span>1</span></a></li>
 		
@@ -459,6 +493,14 @@
   <ul class="entry list-unstyled">
     
       <li>
+        <a href="/2020/08/10/Docker 相关笔记/" ><i class="fa fa-file-o"></i>Docker 相关笔记</a>
+      </li>
+    
+      <li>
+        <a href="/2020/08/10/Windows 更新出错导致的蓝屏问题解决/" ><i class="fa fa-file-o"></i>Windows 更新出错导致的蓝屏问题解决</a>
+      </li>
+    
+      <li>
         <a href="/2020/04/02/在 CRA 项目中使用 WebWorker/" ><i class="fa fa-file-o"></i>在 CRA 项目中使用 WebWorker</a>
       </li>
     
@@ -468,14 +510,6 @@
     
       <li>
         <a href="/2020/03/23/私有 NPM 仓库搭建记录/" ><i class="fa fa-file-o"></i>私有 NPM 仓库搭建记录</a>
-      </li>
-    
-      <li>
-        <a href="/2020/03/22/快速搭建 V2ray/" ><i class="fa fa-file-o"></i>快速搭建 V2ray</a>
-      </li>
-    
-      <li>
-        <a href="/2020/03/21/Mac 端使用 Qt 构建 RDM 记录/" ><i class="fa fa-file-o"></i>Mac 端使用 Qt 构建 RDM 记录</a>
       </li>
     
   </ul>
